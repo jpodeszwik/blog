@@ -7,6 +7,8 @@ import Bio from '../components/Bio'
 import Layout from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
 
+require("prism-themes/themes/prism-darcula.css");
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark

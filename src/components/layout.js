@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
 
+
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
@@ -26,7 +27,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            jpodeszwik's blog
           </Link>
         </h1>
       )
@@ -47,7 +48,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            jpodeszwik's blog
           </Link>
         </h3>
       )
