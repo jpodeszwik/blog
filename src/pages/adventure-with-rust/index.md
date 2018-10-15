@@ -5,6 +5,8 @@ date: "2018-10-14"
 
 I have found some unusual motivation to learn Rust programming language. Here's what happened...
 
+<!-- end-excerpt -->
+
 ## Problem
 
 I don't play video games very often, but when I do, I like using my __Razer Naga 2014__ mouse. It has 12 extra buttons on it's side, which really improve my gaming experience. The only problem I've had with this mouse is that Razer does not provide any official application for managing those buttons for Linux platform. The mouse works, but side buttons are bounded to keys 1..9, 0, -, =, and it's not possible to change that binding.
@@ -17,9 +19,9 @@ I've decided to write a program that is able to remap my Razer Naga's buttons. I
 
 ## Rust
 
-Rust is an object oriented programming language with support for functional programming. It is fast - [in some benchmarks even faster than C](https://benchmarksgame-team.pages.debian.net/benchmarksgame/faster/rust.html). It's compiler is sometimes annoying, but it guarantees memory and thread safety. Rust doesn't use __Garbage Collector__ to for memory management. Instead it uses kind of __Scope-based resource management__ to reclaim memory, which makes it more deterministic than in languages using Garbbage Collection.
+Rust is an object oriented programming language with support for functional programming. It is fast - [in some benchmarks even faster than C](https://benchmarksgame-team.pages.debian.net/benchmarksgame/faster/rust.html). It's compiler is sometimes annoying, but it guarantees memory and thread safety. Rust doesn't use __Garbage Collector__ to for memory management. Instead it uses kind of __Scope-based resource management__ to reclaim memory, which makes it more deterministic than in languages using Garbage Collection.
 
-In my opinion Rust has __steep learning curve__. Even exeperienced developers have to fight with it's compiler from time to time. However Rust was 3 times in a row __#1__ most loved programming language in Stack overflow developer surveys.
+In my opinion Rust has __steep learning curve__. Even experienced developers have to fight with it's compiler from time to time. However Rust was 3 times in a row __#1__ most loved programming language in Stack overflow developer surveys.
 
 ## Solution
 
@@ -65,7 +67,7 @@ fn process_event(event: InputEvent, input_device: &mut Device) {
 }
 ```
 
-To make it fully functional I had to do one more thing - disable razer keyboard in xorg server. Otherwise xorg server would receive standard Naga keypress event, and additional keypress event from my virtual keyboard for each button press.
+To make it fully functional I had to do one more thing - disable razer keyboard in xorg server. Otherwise for each naga button press xorg server would receive standard Naga key press event (with keys 1..9, 0, -, =), and additional key press event from my virtual keyboard.
 
 I've added such file, to disable it: 
 
@@ -83,6 +85,6 @@ And that's it! It seemed to be working properly during my gaming session.
 
 ## Summary
 
-I wanted to play a little bit on my linux machine and thanks to this, I've found some motivation to learn more Rust. There's still much to learn, but I've made some steps forward. The language seems to be very powerfull and I would like to have it in my toolbox.
+I wanted to play a little bit on my linux machine and thanks to this, I've found some motivation to learn more Rust. The best way for me to learn a new programming language is to write a project in it. I'm still struggling with the rust compiler, but I've made some steps forward. The language seems to be very powerful and I would like to have it in my toolbox.
 
 Full source code is available in my github repository [jpodeszwik/razer-naga-2014-key-remap](https://github.com/jpodeszwik/razer-naga-2014-key-remap).
