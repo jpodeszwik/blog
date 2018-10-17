@@ -42,7 +42,7 @@ pub fn map_events(naga: Naga, input_device: &mut Device) {
     loop {
         let event = naga.next_event();
         match event {
-            Ok(k) => process_event(k.1, input_device),
+            Ok((_read_status, input_event)) => process_event(input_event, input_device),
             Err(e) => {
                 println!("Err: {}", e);
                 return;
@@ -67,21 +67,7 @@ fn process_event(event: InputEvent, input_device: &mut Device) {
 }
 ```
 
-To make it fully functional I had to do one more thing - disable razer keyboard in xorg server. Otherwise for each naga button press xorg server would receive standard Naga key press event (with keys 1..9, 0, -, =), and additional key press event from my virtual keyboard.
-
-I've added such file, to disable it: 
-
-```/etc/X11/xorg.conf.d/disable-razer-naga-2014-keyboard.conf```
-```
-Section "InputClass"
-   Identifier         "disable RazerNaga2014 keyboard"
-   MatchIsKeyboard    "on"
-   MatchProduct       "Razer Razer Naga 2014"
-   Option             "Ignore" "on"
-EndSection
-```
-
-And that's it! It seemed to be working properly during my gaming session.
+It seemed to be working properly during my gaming session! :)
 
 ## Summary
 
