@@ -55,13 +55,13 @@ We secured parts of the database containing flags, and amounts of fights. Those 
 
 ## Production run
 
-On the day of the marathon I sat with my laptop near the mat, and watched how the system performed. We did some manual tests prior the marathon, but I was stressed anyway. I could watch the changes in the database live. If was fascinating to see events transformed into flags, and flags counted into sums which appeared in the ranking.
+On the day of the marathon I sat with my laptop near the mat, and watched how the system performed. We did some manual tests prior the marathon, but I was stressed anyway. I could watch the changes in the database live. It was fascinating to see events transformed into flags, and flags counted into sums which appeared in the ranking.
 
 We had a bug in app for participants. Results were badly sorted. I fixed the bug during the marathon. After that the whole system worked. We haven't found more bugs during the marathon.
 
-I found youtube [video](https://www.youtube.com/watch?v=ibUL80-hqrY) with part of the marathon it shows organizers walking with the smartphones.
+I found youtube [video](https://www.youtube.com/watch?v=ibUL80-hqrY) with part of the marathon. You can see some fights and organizers walking with the smartphones.
 
-After I spent some time watching how the system is performing I put my gi (kimono) on and I did some fights. I didn't do much, because most of my energy was consumed by the stress. All my fights were registered in the system.
+After I spent some time watching how the system is performing, I put my gi (kimono) on and I did some fights. I didn't do much, because most of my energy was consumed by the stress. All my fights were registered in the system.
 
 ## After the marathon
 
